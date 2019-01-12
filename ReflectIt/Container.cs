@@ -9,6 +9,8 @@ namespace ReflectIt
     public class Container
     {
 
+        Dictionary<Type, Type> _map = new Dictionary<Type, Type>();
+
         public ContainerBuilder For<TSource>()
         {
             return For(typeof(TSource));
