@@ -23,7 +23,13 @@ namespace ReflectIt
         }
 
 
-        public object Resolve<T>()
+        public TSource Resolve<TSource>()
+        {
+            return (TSource)Resolve(typeof(TSource));   
+        }
+
+
+        public object Resolve(Type sourceType)
         {
             throw new NotImplementedException();
         }
