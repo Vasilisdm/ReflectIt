@@ -49,7 +49,8 @@ namespace ReflectIt
 
             public ContainerBuilder Use(Type destinationType)
             {
-
+                _container._map.Add(_sourceType, destinationType);
+                return this;
             }
         }
 
