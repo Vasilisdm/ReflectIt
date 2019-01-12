@@ -32,5 +32,18 @@ namespace ReflectIt
             throw new NotImplementedException();
         }
 
+
+        public class ContainerBuilder
+        {
+            public ContainerBuilder(Container container, Type sourceType)
+            {
+                _container = container;
+                _sourceType = sourceType;
+            }
+
+            Container _container;
+            Type _sourceType;
+        }
+
     }
 }
