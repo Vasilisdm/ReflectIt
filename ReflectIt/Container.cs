@@ -8,19 +8,29 @@ namespace ReflectIt
 {
     public class Container
     {
-        public Container For<T>()
+
+        public Container For<TSource>()
+        {
+            return For(typeof(TSource));
+        }
+
+
+        public Container For(Type sourceType)
         {
             return this;
         }
 
-        public object Resolve<T>()
+
+        public void Use<T1>()
         {
             throw new NotImplementedException();
         }
 
-        public void Use<T>()
+
+        public object Resolve<T1>()
         {
             throw new NotImplementedException();
         }
+
     }
 }
