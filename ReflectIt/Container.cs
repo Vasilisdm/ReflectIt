@@ -21,13 +21,7 @@ namespace ReflectIt
         }
 
 
-        public void Use<T1>()
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public object Resolve<T1>()
+        public object Resolve<T>()
         {
             throw new NotImplementedException();
         }
@@ -43,6 +37,12 @@ namespace ReflectIt
 
             Container _container;
             Type _sourceType;
+
+
+            public void Use<T>()
+            {
+                throw new NotImplementedException();
+            }
         }
 
     }
