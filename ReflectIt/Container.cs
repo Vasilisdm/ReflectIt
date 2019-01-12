@@ -39,9 +39,15 @@ namespace ReflectIt
             Type _sourceType;
 
 
-            public void Use<T>()
+            public ContainerBuilder Use<TDestination>()
             {
-                throw new NotImplementedException();
+                return Use(typeof(TDestination));
+            }
+
+
+            public ContainerBuilder Use(Type destinationType)
+            {
+
             }
         }
 
