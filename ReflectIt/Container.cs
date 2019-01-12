@@ -31,7 +31,15 @@ namespace ReflectIt
 
         public object Resolve(Type sourceType)
         {
-            throw new NotImplementedException();
+            if (_map.ContainsKey(sourceType))
+            {
+                var destinationType = _map[sourceType];
+                return Activator.CreateInstance(destinationType);
+            }
+            else
+            {
+                throw new InvalidOperationException("Could not resolve " + sourceType.FullName);
+            }
         }
 
 
