@@ -7,8 +7,14 @@ namespace ReflectIt.Tests
     public class IoCTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Can_Resolve_Types()
         {
+            var ioc = new Container();
+            ioc.For<ILogger>().Use<SqlServerLogger>();
+
+            var logger = ioc.Resolve<ILogger>();
+
+            Assert.AreEqual(typeof(SqlServerLogger), logger.GetType());
         }
     }
 }
