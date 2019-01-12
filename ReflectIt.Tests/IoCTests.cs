@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ReflectIt.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class IoCTests
     {
         [TestMethod]
         public void TestMethod1()
