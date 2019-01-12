@@ -23,6 +23,12 @@ namespace ReflectIt
 
             Console.WriteLine();
             Console.ReadLine();
+
+            var employee = new Employee();
+            var employeeType = employee.GetType();
+            var methodInfo = employeeType.GetMethod("Speak");
+            methodInfo = methodInfo.MakeGenericMethod(typeof(DateTime));
+            methodInfo.Invoke(employee, null);
         }
 
         private static object CreateCollection(Type collectionType, Type itemType)
@@ -40,6 +46,7 @@ namespace ReflectIt
         public void Speak<T>()
         {
             Console.WriteLine(typeof(T).Name);
+            Console.ReadLine();
         }
     }
 }
