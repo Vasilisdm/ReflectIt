@@ -9,15 +9,15 @@ namespace ReflectIt
     public class Container
     {
 
-        public Container For<TSource>()
+        public ContainerBuilder For<TSource>()
         {
             return For(typeof(TSource));
         }
 
 
-        public Container For(Type sourceType)
+        public ContainerBuilder For(Type sourceType)
         {
-            return this;
+            return new ContainerBuilder(this, sourceType);
         }
 
 
