@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectIt", "ReflectIt\ReflectIt.csproj", "{5C194C03-E357-4DCF-AE04-B12B98D3DB3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectIt.Tests", "ReflectIt.Tests\ReflectIt.Tests.csproj", "{735F0CFF-5A3F-41E6-8570-F74221F921E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C194C03-E357-4DCF-AE04-B12B98D3DB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C194C03-E357-4DCF-AE04-B12B98D3DB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C194C03-E357-4DCF-AE04-B12B98D3DB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735F0CFF-5A3F-41E6-8570-F74221F921E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735F0CFF-5A3F-41E6-8570-F74221F921E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735F0CFF-5A3F-41E6-8570-F74221F921E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735F0CFF-5A3F-41E6-8570-F74221F921E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
