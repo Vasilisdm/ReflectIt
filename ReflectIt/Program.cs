@@ -22,6 +22,7 @@ namespace ReflectIt
             }
 
             Console.WriteLine();
+            Console.ReadLine();
         }
 
         private static object CreateCollection(Type collectionType, Type itemType)
@@ -36,5 +37,9 @@ namespace ReflectIt
 
         public string Name { get; set; }
 
+        public void Speak<T>()
+        {
+            Console.WriteLine(typeof(T).Name);
+        }
     }
 }
