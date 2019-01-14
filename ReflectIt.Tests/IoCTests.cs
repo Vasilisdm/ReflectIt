@@ -36,7 +36,7 @@ namespace ReflectIt.Tests
         {
             var ioc = new Container();
             ioc.For<ILogger>().Use<SqlServerLogger>();
-            ioc.For<IRepository<Employee>>().Use<SqlRepository<Employee>>();
+            ioc.For(typeof(IRepository<>)).Use(typeof(SqlRepository<>));
 
             var service = ioc.Resolve<InvoiceService>();
 
