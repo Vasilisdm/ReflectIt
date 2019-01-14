@@ -34,7 +34,7 @@ namespace ReflectIt
             if (_map.ContainsKey(sourceType))
             {
                 var destinationType = _map[sourceType];
-                return Activator.CreateInstance(destinationType);
+                return CreateInstance(destinationType);
             }
             else
             {
@@ -42,6 +42,17 @@ namespace ReflectIt
             }
         }
 
+        private object CreateInstance(Type destinationType)
+        {
+            var parameters = destinationType.GetConstructors()
+                                            .OrderByDescending(c => c.GetParameters().Count())
+                                            .First()
+                                            .GetParameters()
+                                            .Select(p => p.ParameterType)
+                                            .ToArray();
+
+            return Activator.CreateInstance(destinationType, parameters);
+        }
 
         public class ContainerBuilder
         {
