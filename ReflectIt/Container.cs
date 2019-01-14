@@ -48,7 +48,7 @@ namespace ReflectIt
                                             .OrderByDescending(c => c.GetParameters().Count())
                                             .First()
                                             .GetParameters()
-                                            .Select(p => p.ParameterType)
+                                            .Select(p => Resolve(p.ParameterType))
                                             .ToArray();
 
             return Activator.CreateInstance(destinationType, parameters);

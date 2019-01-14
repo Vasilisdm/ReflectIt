@@ -29,5 +29,18 @@ namespace ReflectIt.Tests
 
             Assert.AreEqual(typeof(SqlRepository<Employee>), repository.GetType());
         }
+
+
+        [TestMethod]
+        public void Can_Resolve_Concrete_Type()
+        {
+            var ioc = new Container();
+            ioc.For<ILogger>().Use<SqlServerLogger>();
+            ioc.For<IRepository<Employee>>().Use<SqlRepository<Employee>>();
+
+            var service = ioc.Resolve<InvoiceService>();
+
+            Assert.IsNotNull(service);
+        }
     }
 }
