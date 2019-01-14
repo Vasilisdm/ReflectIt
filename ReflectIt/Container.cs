@@ -36,6 +36,10 @@ namespace ReflectIt
                 var destinationType = _map[sourceType];
                 return CreateInstance(destinationType);
             }
+            else if (!sourceType.IsAbstract)
+            {
+                return CreateInstance(sourceType);
+            }
             else
             {
                 throw new InvalidOperationException("Could not resolve " + sourceType.FullName);
