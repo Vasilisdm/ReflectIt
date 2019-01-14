@@ -7,5 +7,5 @@
 * Resolving concrete types using unbound generics.
 
 ## Author
-[Vasilis Dimitriou](https://github.com/Vasilisdm)
+[Vasileios Dimitriou](https://github.com/Vasilisdm)
 
